@@ -6,4 +6,11 @@
       </li>
     </ul>
   </div>
+  <hr />
+  <h3>Con ng-template</h3>
+  <ul>
+    <ng-template ngFor let-dish let-i="index" [ngForOf]="dishes">
+      <li>{{ i + 1 }}: {{ dish.name }} - $ {{ dish.price }}</li>
+    </ng-template>
+  </ul>
 </div>
