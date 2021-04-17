@@ -1,7 +1,7 @@
 {
   "dishes": [
     {
-      "name": "Ceviche",
+      "name": "Ceviche JSON",
       "price": "1234"
     },
     {
