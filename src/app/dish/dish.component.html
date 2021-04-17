@@ -1,4 +1,14 @@
 <div class="rw-dish">
   <img [src]="photo" width="200" />
-  <input [placeholder]="placeholder" [value]="name" type="text" />
+  <input
+    [placeholder]="placeholder"
+    [value]="name"
+    type="text"
+    (input)="handleInput($event)"
+    (blur)="handleBlur($event)"
+    (keyup)="handleKeyUp($event)"
+  />
+
+  {{ name }}
+  <button (click)="changeName()">Cambiar nombre</button>
 </div>
