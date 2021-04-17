@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'restaurant';
   dish = 'carapulcra';
+  link =
+    ' <a href="https://github.com/yacafx/area-51-c3-restaurant">Repositorio</a>';
 
-  taste = false;
+  taste = true;
 
   changeTest(): void {
     this.taste = !this.taste;
