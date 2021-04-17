@@ -113,6 +113,46 @@
           }
         }
       }
+    },
+    "data-models": {
+      "projectType": "library",
+      "root": "projects/data-models",
+      "sourceRoot": "projects/data-models/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/data-models/tsconfig.lib.json",
+            "project": "projects/data-models/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/data-models/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/data-models/src/test.ts",
+            "tsConfig": "projects/data-models/tsconfig.spec.json",
+            "karmaConfig": "projects/data-models/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/data-models/tsconfig.lib.json",
+              "projects/data-models/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "restaurant"
