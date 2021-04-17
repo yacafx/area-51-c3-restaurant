@@ -1,5 +1,5 @@
 {
-  "dishes": [
+  "jsonDishes": [
     {
       "name": "Ceviche JSON",
       "price": "1234"

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from 'projects/data-models/src/public-api';
-import jsonData from '../../assets/dishes.json';
+// import jsonData from '../../assets/dishes.json';
+// import { dishes as jsonDishes } from '../../assets/dishes.json';
+import { jsonDishes } from '../../assets/dishes.json';
 
 @Component({
   selector: 'rw-menu',
@@ -15,7 +17,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     // this.dishes = [...this.initDishes()];
     // this.dishes = [...this.initDishesFromJson()];
-    this.dishes = [...jsonData.dishes];
+    this.dishes = [...jsonDishes];
   }
 
   initDishes(): Dish[] {
@@ -60,8 +62,8 @@ export class MenuComponent implements OnInit {
     return dishes;
   }
 
-  initDishesFromJson(): Dish[] {
-    console.log(jsonData.dishes);
-    return jsonData.dishes;
-  }
+  // initDishesFromJson(): Dish[] {
+  //   console.log(jsonData.dishes);
+  //   return jsonData.dishes;
+  // }
 }
