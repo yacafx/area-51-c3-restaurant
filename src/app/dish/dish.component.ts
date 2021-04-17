@@ -24,6 +24,10 @@ export class DishComponent implements OnInit {
     this.name = 'Pan con huevo';
   }
 
+  changeNameModel(value: string): void {
+    this.name = value;
+  }
+
   handleInput(event: Event): void {
     const input = event.target as HTMLInputElement;
     console.log('Input -> ' + input.value);

@@ -8,7 +8,12 @@
     (blur)="handleBlur($event)"
     (keyup)="handleKeyUp($event)"
   />
-
+  <!-- <input
+    type="text"
+    [ngModel]="name"
+    (ngModelChange)="changeNameModel($event)"
+  /> -->
+  <input type="text" [(ngModel)]="name" />
   {{ name }}
   <button (click)="changeName()">Cambiar nombre</button>
 </div>
