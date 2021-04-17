@@ -1,1 +1,9 @@
-<div class="menu"></div>
+<div class="rw-menu">
+  <div>
+    <ul>
+      <li *ngFor="let dish of dishes; let i = index">
+        {{ i + 1 }}: {{ dish.name }} - $ {{ dish.price }}
+      </li>
+    </ul>
+  </div>
+</div>
