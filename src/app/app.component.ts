@@ -12,8 +12,14 @@ export class AppComponent {
     ' <a href="https://github.com/yacafx/area-51-c3-restaurant">Repositorio</a>';
 
   taste = false;
+  flavor = '';
 
   changeTest(): void {
     this.taste = !this.taste;
+  }
+
+  updateFlavor(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.flavor = input.value;
   }
 }

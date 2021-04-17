@@ -1,5 +1,14 @@
 <div class="rw-root">
   <h1 (click)="changeTest()">{{ title }}</h1>
+  <input type="text" [value]="flavor" (input)="updateFlavor($event)" />
+
+  <div *ngIf="flavor.length > 2">Se busca el sabor {{ flavor }}</div>
+
+  <ng-template [ngIf]="flavor.length > 2">
+    <div>Se busca el sabor {{ flavor }}</div>
+    <div>Se busca el sabor {{ flavor }}</div>
+  </ng-template>
+
   <div *ngIf="taste">
     <h2 [innerHTML]="link"></h2>
     <span class="taste">
