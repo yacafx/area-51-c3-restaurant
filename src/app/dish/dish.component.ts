@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'rw-dish',
-  template: `<div>
-    <p>dish works!</p>
-  </div>`,
+  templateUrl: './dish.component.html',
   styleUrls: ['./dish.component.scss'],
 })
 export class DishComponent implements OnInit {

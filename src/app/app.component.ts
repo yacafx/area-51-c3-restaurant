@@ -11,7 +11,7 @@ export class AppComponent {
   link =
     ' <a href="https://github.com/yacafx/area-51-c3-restaurant">Repositorio</a>';
 
-  taste = true;
+  taste = false;
 
   changeTest(): void {
     this.taste = !this.taste;
