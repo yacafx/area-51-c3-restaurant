@@ -1,5 +1,5 @@
 <div class="rw-dish">
-  <img [src]="photo" width="200" />
+  <img [src]="photo" width="200" #dishPhoto />
   <input
     [placeholder]="placeholder"
     [value]="name"
@@ -13,7 +13,9 @@
     [ngModel]="name"
     (ngModelChange)="changeNameModel($event)"
   /> -->
-  <input type="text" [(ngModel)]="name" />
+  <!-- <input type="text" [(ngModel)]="name" /> -->
+
+  <input type="text" #dishName />
   {{ name }}
-  <button (click)="changeName()">Cambiar nombre</button>
+  <button (click)="changeName(dishName.value)">Cambiar nombre</button>
 </div>

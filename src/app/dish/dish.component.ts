@@ -20,8 +20,9 @@ export class DishComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeName(): void {
-    this.name = 'Pan con huevo';
+  changeName(name: string): void {
+    console.log('Template Ref -> ' + name);
+    // this.name = 'Pan con huevo';
   }
 
   changeNameModel(value: string): void {
