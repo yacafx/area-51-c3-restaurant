@@ -2,11 +2,5 @@
   <h3>Platillos</h3>
   <h4>{{ today | date: "d MMMM y - hh:mm" | uppercase }}</h4>
   <hr />
-  <rw-dish
-    *ngFor="let dish of dishes"
-    [photo]="dish.photo"
-    [name]="dish.name"
-    [price]="dish.price"
-    [stock]="dish.available"
-  ></rw-dish>
+  <rw-dish *ngFor="let dish of dishes" [dish]="dish"></rw-dish>
 </div>

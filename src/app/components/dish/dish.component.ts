@@ -12,11 +12,13 @@ import { Dish } from 'projects/data-models/src/public-api';
   templateUrl: './dish.component.html',
   styleUrls: ['./dish.component.scss'],
 })
-export class DishComponent implements OnInit, OnChanges, Dish {
-  @Input() name = 'Default name';
-  @Input() photo: string | undefined;
-  @Input() price = '';
-  @Input() stock: boolean | undefined;
+export class DishComponent implements OnInit, OnChanges {
+  @Input() dish: Dish = {
+    name: '',
+    photo: '',
+    price: '',
+    available: false,
+  };
 
   private placeholder =
     'https://via.placeholder.com/300.png/EFF1FA/3850b7?text=The+Dishes';
@@ -26,8 +28,8 @@ export class DishComponent implements OnInit, OnChanges, Dish {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.photo = changes.photo.currentValue || this.placeholder;
+    this.dish.photo = changes.dish.currentValue.photo || this.placeholder;
 
-    this.stock = changes.stock.currentValue || false;
+    this.dish.available = changes.dish.currentValue.available || false;
   }
 }
