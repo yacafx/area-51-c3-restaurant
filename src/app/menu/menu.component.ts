@@ -15,4 +15,10 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.dishes = [...jsonDishes];
   }
+
+  getClass(dish: Dish): Object {
+    console.log(dish.available ?? 'warning!');
+
+    return { available: dish.available };
+  }
 }

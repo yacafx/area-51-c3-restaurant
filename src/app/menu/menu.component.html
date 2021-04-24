@@ -1,16 +1,18 @@
 <div class="rw-menu">
-  <h3>Platillos</h3>
+  <h3>A. Platillos</h3>
   <ul>
     <li *ngFor="let dish of dishes; let i = index">
-      <span></span>
+      <span class="status" [class.available]="dish.available"></span>
       {{ i }}: {{ dish.name }}
     </li>
   </ul>
-  <h3>Platillos</h3>
+  <hr />
+  <h3>B. Platillos</h3>
   <ul>
     <li *ngFor="let dish of dishes; let i = index">
-      <span></span>
-      {{ i }}: {{ dish.name }}
+      <!-- <span class="status" [ngClass]="{ available: dish.available }"></span> -->
+      <span class="status" [ngClass]="getClass(dish)"></span>
+      {{ dish.available }} - {{ i }}: {{ dish.name }}
     </li>
   </ul>
 </div>
