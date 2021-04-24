@@ -1,9 +1,16 @@
 <div class="rw-menu">
-  <h3>A. Platillos</h3>
+  <h3>Platillos</h3>
+  <!-- {{ today | date: "d MMMM y - hh:mm" | uppercase }} -->
+  {{ today | date: "full" | uppercase }}
   <ul>
     <li *ngFor="let dish of dishes; let i = index">
       <span class="status" [class.available]="dish.available"></span>
-      {{ i }}: {{ dish.name }}
+      {{ i }}: {{ dish.name }}:
+      {{ dish.price | currency: "S./ ":"symbol":"4.1-5" }}
+      <!-- {{ i }}: {{ dish.name }}: {{ dish.price | number: "4.1-5" }} -
+      {{ average | percent }} -->
+      <!-- {{ i }}: {{ dish.name | uppercase }} -->
+      <!-- <pre> {{ dish | json }} </pre> -->
     </li>
   </ul>
 </div>

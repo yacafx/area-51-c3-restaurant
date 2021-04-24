@@ -9,6 +9,8 @@ import { jsonDishes } from '../../assets/dishes.json';
 })
 export class MenuComponent implements OnInit {
   dishes: Dish[] = [];
+  average = 0.6589;
+  today = 1619278296373;
 
   constructor() {}
 
