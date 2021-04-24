@@ -10,8 +10,11 @@
   <h3>B. Platillos</h3>
   <ul>
     <li *ngFor="let dish of dishes; let i = index">
-      <!-- <span class="status" [ngClass]="{ available: dish.available }"></span> -->
-      <span class="status" [ngClass]="getClass(dish)"></span>
+      <!-- <span
+        class="status"
+        [ngStyle]="{ backgroundColor: dish.available ? '#2ecc71' : '#c0392b' }"
+      ></span> -->
+      <span class="status" [ngStyle]="getStyles(dish)"></span>
       {{ dish.available }} - {{ i }}: {{ dish.name }}
     </li>
   </ul>

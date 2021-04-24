@@ -21,4 +21,8 @@ export class MenuComponent implements OnInit {
 
     return { available: dish.available };
   }
+
+  getStyles(dish: Dish): Object {
+    return { backgroundColor: dish.available ? '#2ecc71' : '#c0392b' };
+  }
 }
