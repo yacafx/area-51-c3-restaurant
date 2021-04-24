@@ -1,6 +1,8 @@
 <div class="rw-menu">
-  <h3>Platillos</h3>
-  <h4>{{ today | date: "d MMMM y - hh:mm" | uppercase }}</h4>
+  <h1 class="title is-5">Platillos</h1>
+  <h2 class="subtitle is-6">
+    {{ today | date: "d MMMM y - hh:mm" | uppercase }}
+  </h2>
   <hr />
   <rw-dish *ngFor="let dish of dishes" [dish]="dish"></rw-dish>
 </div>
