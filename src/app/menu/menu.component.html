@@ -3,6 +3,11 @@
   <h2 class="subtitle is-6">
     {{ today | date: "d MMMM y - hh:mm" | uppercase }}
   </h2>
+  <div>Platillo seleccionado: {{ selectedDish }}</div>
   <hr />
-  <rw-dish *ngFor="let dish of dishes" [dish]="dish"></rw-dish>
+  <rw-dish
+    *ngFor="let dish of dishes"
+    [dish]="dish"
+    (add)="addDish($event)"
+  ></rw-dish>
 </div>

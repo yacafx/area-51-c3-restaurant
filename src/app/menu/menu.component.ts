@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
   dishes: Dish[] = [];
   average = 0.6589;
   today = 1619278296373;
+  selectedDish = 'No hay';
 
   constructor() {}
 
@@ -26,5 +27,9 @@ export class MenuComponent implements OnInit {
 
   getStyles(dish: Dish): object {
     return { backgroundColor: dish.available ? '#2ecc71' : '#c0392b' };
+  }
+
+  addDish(dish: Dish): void {
+    this.selectedDish = dish.name;
   }
 }

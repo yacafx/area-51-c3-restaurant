@@ -34,6 +34,7 @@
         <button
           *ngIf="dish.available"
           class="button is-success is-small is-outlined"
+          (click)="onAdd(dish)"
         >
           <span class="icon is-small">
             <fa-icon [icon]="['fas', 'plus']"></fa-icon>
