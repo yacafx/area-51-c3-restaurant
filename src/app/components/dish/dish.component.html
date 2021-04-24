@@ -29,8 +29,16 @@
             'is-danger': !dish.available
           }"
         >
-          {{ dish.available ? "Todavía alcanzas" : "Ya no hay" }}
+          {{ dish.available ? "Todavía alcanzas" : "Ya no hay 😭" }}
         </span>
+        <button
+          *ngIf="dish.available"
+          class="button is-success is-small is-outlined"
+        >
+          <span class="icon is-small">
+            <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+          </span>
+        </button>
       </div>
     </div>
   </div>
