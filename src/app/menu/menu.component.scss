@@ -1,7 +1,4 @@
 .rw-menu {
-  ul {
-    list-style: none;
-  }
   .status {
     width: 10px;
     height: 10px;
@@ -10,8 +7,13 @@
     margin: 8px 10px 0 0;
     float: left;
     border-radius: 50%;
+
     &.available {
       background: #2ecc71;
+    }
+
+    &.warning {
+      background: yellow;
     }
   }
 }
