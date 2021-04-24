@@ -5,16 +5,17 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { Dish } from 'projects/data-models/src/public-api';
 
 @Component({
   selector: 'rw-dish',
   templateUrl: './dish.component.html',
   styleUrls: ['./dish.component.scss'],
 })
-export class DishComponent implements OnInit, OnChanges {
-  @Input() photo: string | undefined;
+export class DishComponent implements OnInit, OnChanges, Dish {
   @Input() name = 'Default name';
-  @Input() price: number | undefined;
+  @Input() photo: string | undefined;
+  @Input() price = '';
   @Input() stock: boolean | undefined;
 
   private placeholder =
@@ -26,5 +27,7 @@ export class DishComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.photo = changes.photo.currentValue || this.placeholder;
+
+    this.stock = changes.stock.currentValue || false;
   }
 }
