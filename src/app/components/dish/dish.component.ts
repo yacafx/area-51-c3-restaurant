@@ -6,41 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dish.component.scss'],
 })
 export class DishComponent implements OnInit {
-  name: string;
-  placeholder: string;
-  photo: string;
+  photo = 'https://via.placeholder.com/300.png/EFF1FA/3850b7?text=The+Dishes';
+  name = 'Default name';
+  price = 0;
+  stock = false;
 
-  constructor() {
-    this.placeholder = 'El platillo es...';
-    this.name = 'Pan con palta';
-    // this.photo =
-    //   'https://www.diabelife.com/wp-content/uploads/2015/08/pan-integral-con-palta-y-huevo.jpg';
-    this.photo = 'assets/dish-1.jpeg';
-  }
+  constructor() {}
 
   ngOnInit(): void {}
-
-  changeName(name: string): void {
-    console.log('Template Ref -> ' + name);
-    // this.name = 'Pan con huevo';
-  }
-
-  changeNameModel(value: string): void {
-    this.name = value;
-  }
-
-  handleInput(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    console.log('Input -> ' + input.value);
-  }
-
-  handleBlur(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    console.log('Blur -> ' + input.value);
-  }
-
-  handleKeyUp(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    console.log('KeyUp -> ' + input.value);
-  }
 }

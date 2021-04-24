@@ -1,21 +1,6 @@
 <div class="rw-dish">
-  <img [src]="photo" width="200" #dishPhoto />
-  <input
-    [placeholder]="placeholder"
-    [value]="name"
-    type="text"
-    (input)="handleInput($event)"
-    (blur)="handleBlur($event)"
-    (keyup)="handleKeyUp($event)"
-  />
-  <!-- <input
-    type="text"
-    [ngModel]="name"
-    (ngModelChange)="changeNameModel($event)"
-  /> -->
-  <!-- <input type="text" [(ngModel)]="name" /> -->
-
-  <input type="text" #dishName />
-  {{ name }}
-  <button (click)="changeName(dishName.value)">Cambiar nombre</button>
+  <img [src]="photo" width="100" />
+  <span>{{ name }}</span>
+  <span>{{ price }}</span>
+  <span>{{ stock }}</span>
 </div>
