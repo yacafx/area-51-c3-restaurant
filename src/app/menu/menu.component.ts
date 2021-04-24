@@ -18,13 +18,13 @@ export class MenuComponent implements OnInit {
     this.dishes = [...jsonDishes];
   }
 
-  getClass(dish: Dish): Object {
+  getClass(dish: Dish): object {
     console.log(dish.available ?? 'warning!');
 
     return { available: dish.available };
   }
 
-  getStyles(dish: Dish): Object {
+  getStyles(dish: Dish): object {
     return { backgroundColor: dish.available ? '#2ecc71' : '#c0392b' };
   }
 }
