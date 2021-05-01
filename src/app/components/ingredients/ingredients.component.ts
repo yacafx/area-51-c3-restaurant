@@ -11,7 +11,7 @@ export class IngredientsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.loadCountries().then((result) => console.log(result));
+    this.loadCountries().then((result) => result);
   }
 
   async loadCountries(): Promise<[Country, Person[]]> {
