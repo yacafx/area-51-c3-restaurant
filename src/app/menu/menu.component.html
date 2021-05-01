@@ -10,6 +10,7 @@
       *ngFor="let dish of dishes"
       [dish]="dish"
       (add)="addDish($event)"
+      (delete)="deleteDish($event)"
     ></rw-dish>
   </div>
   <ng-template #error>

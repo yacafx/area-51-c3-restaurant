@@ -17,4 +17,14 @@ export class DishesService {
   get(): Observable<Dish[]> {
     return this.http.get<Dish[]>(apiURL);
   }
+
+  delete(dish: Dish): void {
+    localStorage.setItem('dish', dish.name);
+    localStorage.setItem('dishObject', JSON.stringify(dish));
+
+    const result = localStorage.getItem('dishObject');
+    console.log(JSON.parse(result || 'data'));
+
+    this.http.delete<Dish>(`${apiURL}/${dish.id}`).subscribe();
+  }
 }

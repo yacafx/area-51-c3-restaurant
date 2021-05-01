@@ -16,12 +16,14 @@ import { Dish } from 'projects/data-models/src/public-api';
 })
 export class DishComponent implements OnInit, OnChanges {
   @Input() dish: Dish = {
+    id: 0,
     name: '',
     photo: '',
     price: '',
     available: false,
   };
   @Output() add: EventEmitter<Dish> = new EventEmitter();
+  @Output() delete: EventEmitter<Dish> = new EventEmitter();
 
   private placeholder =
     'https://via.placeholder.com/300.png/EFF1FA/3850b7?text=The+Dishes';
@@ -38,5 +40,9 @@ export class DishComponent implements OnInit, OnChanges {
 
   onAdd(dish: Dish): void {
     this.add.emit(dish);
+  }
+
+  onDelete(dish: Dish): void {
+    this.delete.emit(dish);
   }
 }

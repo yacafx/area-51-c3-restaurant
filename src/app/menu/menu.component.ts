@@ -37,4 +37,8 @@ export class MenuComponent implements OnInit {
     this.check.add(dish);
     console.log(':::', this.check.products);
   }
+
+  deleteDish(dish: Dish): void {
+    this.data.delete(dish);
+  }
 }
