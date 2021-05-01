@@ -15,7 +15,7 @@ describe('CheckService', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should remove a dish from the list of dishes', () => {
+  it('should remove a dish from the list of dishes', () => {
     // Arrange
     const dishToRemove: Dish = {
       name: 'Ceviche JSON',
