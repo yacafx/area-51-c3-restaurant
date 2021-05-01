@@ -9,7 +9,6 @@ import { DishesService } from '../services/dishes.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  dishes: Dish[] = [];
   average = 0.6589;
   today = 1619278296373;
   selectedDish = 'No hay';
@@ -19,25 +18,9 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.getDishes();
     this.check.total();
-    // console.log(':::', this.check.dishes);
   }
 
-  getDishes(): void {
-    this.data.get().subscribe(
-      (dishes) => {
-        // Get results
-        this.dishes = [...dishes];
-      },
-      (error) => {
-        // Error handling
-      },
-      () => {
-        // Complete
-        console.log('::: Finished');
-      }
-    );
-    //  this.dishes = [...this.data.dishes];
-  }
+  getDishes(): void {}
 
   getClass(dish: Dish): object {
     console.log(dish.available ?? 'warning!');

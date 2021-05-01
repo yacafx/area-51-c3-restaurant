@@ -5,9 +5,16 @@
   </h2>
   <div>Platillo seleccionado: {{ selectedDish }}</div>
   <hr />
-  <rw-dish
-    *ngFor="let dish of dishes"
-    [dish]="dish"
-    (add)="addDish($event)"
-  ></rw-dish>
+  <div *ngIf="data.dishes$ | async as dishes; else error">
+    <rw-dish
+      *ngFor="let dish of dishes"
+      [dish]="dish"
+      (add)="addDish($event)"
+    ></rw-dish>
+  </div>
+  <ng-template #error>
+    <div class="notification is-danger is-light">
+      <strong>No hay datos disponibles</strong>, intenta más tarde por favor.
+    </div>
+  </ng-template>
 </div>

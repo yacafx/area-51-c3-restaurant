@@ -8,7 +8,11 @@ import { apiURL } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class DishesService {
-  constructor(private http: HttpClient) {}
+  dishes$: Observable<Dish[]>;
+
+  constructor(private http: HttpClient) {
+    this.dishes$ = this.get();
+  }
 
   get(): Observable<Dish[]> {
     return this.http.get<Dish[]>(apiURL);
