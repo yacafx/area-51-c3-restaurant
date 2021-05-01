@@ -1,38 +1,45 @@
 {
   "jsonDishes": [
     {
+      "id": 1,
       "name": "Ceviche JSON",
       "price": "1234",
       "available": true
     },
     {
+      "id": 2,
       "name": "Pollo a la brasa",
       "photo": "https://www.radionacional.com.pe/sites/default/files/styles/note/public/pollo_brasa.jpg",
       "price": "78383.122345"
     },
     {
+      "id": 3,
       "name": "Causa rellena",
       "price": "8762.56789",
       "available": false
     },
     {
+      "id": 4,
       "name": "Tallarines Rojos",
       "price": "2837",
       "available": false
     },
     {
+      "id": 5,
       "name": "Lomo Saltado",
       "photo": "https://www.196flavors.com/wp-content/uploads/2016/07/lomo-saltado-1-FP.jpg",
       "price": "13434",
       "available": true
     },
     {
+      "id": 6,
       "name": "Arroz con pato",
       "photo": "https://lascomidasperuanas.com/wp-content/uploads/2020/06/Receta-de-arroz-con-pato-peruano.jpg",
       "price": "3457",
       "available": true
     },
     {
+      "id": 7,
       "name": "Chanfainita",
       "photo": "https://decomidaperuana.com/wp-content/uploads/2018/06/receta-de-chanfainita.jpg",
       "price": "8457",
