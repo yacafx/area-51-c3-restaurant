@@ -23,7 +23,19 @@ export class MenuComponent implements OnInit {
   }
 
   getDishes(): void {
-    this.data.get();
+    this.data.get().subscribe(
+      (dishes) => {
+        // Get results
+        this.dishes = [...dishes];
+      },
+      (error) => {
+        // Error handling
+      },
+      () => {
+        // Complete
+        console.log('::: Finished');
+      }
+    );
     //  this.dishes = [...this.data.dishes];
   }
 
