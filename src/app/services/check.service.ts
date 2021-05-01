@@ -22,7 +22,13 @@ export class CheckService {
     console.log(':::', this.dishes);
   }
 
+  /** Get the check product list */
   get products(): Dish[] {
     return this.dishes;
+  }
+
+  /** Remove the indicated dish from the dishes array */
+  remove(dish: Dish): void {
+    this.dishes = [...this.dishes.filter((item) => item.name !== dish.name)];
   }
 }
