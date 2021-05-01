@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from 'projects/data-models/src/public-api';
-import { jsonDishes } from '../../assets/dishes.json';
 import { CheckService } from '../services/check.service';
+import { DishesService } from '../services/dishes.service';
 
 @Component({
   selector: 'rw-menu',
@@ -14,12 +14,17 @@ export class MenuComponent implements OnInit {
   today = 1619278296373;
   selectedDish = 'No hay';
 
-  constructor(private check: CheckService) {}
+  constructor(private check: CheckService, public data: DishesService) {}
 
   ngOnInit(): void {
-    this.dishes = [...jsonDishes];
+    this.getDishes();
     this.check.total();
     // console.log(':::', this.check.dishes);
+  }
+
+  getDishes(): void {
+    this.data.get();
+    //  this.dishes = [...this.data.dishes];
   }
 
   getClass(dish: Dish): object {

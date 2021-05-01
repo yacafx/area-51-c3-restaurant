@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,7 +9,13 @@ import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [AppComponent, MenuComponent],
-  imports: [BrowserModule, ComponentsModule, FormsModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    ComponentsModule,
+    FormsModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

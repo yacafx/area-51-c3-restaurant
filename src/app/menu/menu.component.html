@@ -6,7 +6,7 @@
   <div>Platillo seleccionado: {{ selectedDish }}</div>
   <hr />
   <rw-dish
-    *ngFor="let dish of dishes"
+    *ngFor="let dish of data.dishes"
     [dish]="dish"
     (add)="addDish($event)"
   ></rw-dish>

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
 };
+
+export const url = 'https://midominio.com/jsonDishes';
